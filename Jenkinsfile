@@ -1,11 +1,20 @@
 pipeline {
   agent {
-    label "jenkins-maven"
+    label 'jenkins-maven'
   }
   stages {
     stage('test') {
-      steps {
-        sh 'echo hello'
+      parallel {
+        stage('test') {
+          steps {
+            sh 'echo hello'
+          }
+        }
+        stage('test2') {
+          steps {
+            echo 'test'
+          }
+        }
       }
     }
     stage('1') {
@@ -16,6 +25,19 @@ pipeline {
     stage('2') {
       steps {
         sh 'echo "2222"'
+      }
+    }
+    stage('s') {
+      steps {
+        sleep 2
+      }
+    }
+    stage('') {
+      environment {
+        a = 'aaaa'
+      }
+      steps {
+        sh 'echo $a'
       }
     }
   }
