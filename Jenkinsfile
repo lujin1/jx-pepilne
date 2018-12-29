@@ -13,5 +13,13 @@ pipeline {
         echo '1111'
       }
     }
+    stage('2222') {
+      steps {
+        script {
+          print "12312"
+        }
+
+      }
+    }
   }
 }
