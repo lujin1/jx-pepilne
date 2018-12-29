@@ -10,6 +10,11 @@ pipeline {
             sh 'echo hello'
           }
         }
+        stage('qq') {
+          steps {
+            echo 'qq'
+          }
+        }
       }
     }
   }
