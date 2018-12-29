@@ -18,5 +18,13 @@ pipeline {
         containerLog '2w213'
       }
     }
+    stage('665') {
+      steps {
+        sh 'echo $name'
+      }
+    }
+  }
+  environment {
+    name = 'LUJIN'
   }
 }
