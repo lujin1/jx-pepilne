@@ -10,10 +10,7 @@ pipeline {
             sh 'echo hello'
           }
         }
-        stage('test2') {
-          steps {
-            echo 'test'
-          }
-        }
       }
     }
+  }
+}
