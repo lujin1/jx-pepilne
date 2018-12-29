@@ -21,5 +21,10 @@ pipeline {
 
       }
     }
+    stage('23213') {
+      steps {
+        containerLog '2w213'
+      }
+    }
   }
 }
