@@ -1,5 +1,7 @@
 pipeline {
-  agent any
+  agent {
+  jenkins-maven
+  }
   stages {
     stage('test') {
       steps {
