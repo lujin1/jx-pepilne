@@ -32,7 +32,7 @@ pipeline {
         sleep 2
       }
     }
-    stage('') {
+    stage('3') {
       environment {
         a = 'aaaa'
       }
