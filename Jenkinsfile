@@ -17,28 +17,4 @@ pipeline {
         }
       }
     }
-    stage('1') {
-      steps {
-        echo 'lujin'
-      }
-    }
-    stage('2') {
-      steps {
-        sh 'echo "2222"'
-      }
-    }
-    stage('s') {
-      steps {
-        sleep 2
-      }
-    }
-    stage('3') {
-      environment {
-        a = 'aaaa'
-      }
-      steps {
-        sh 'echo $a'
-      }
-    }
-  }
 }
