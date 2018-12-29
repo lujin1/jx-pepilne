@@ -1,6 +1,6 @@
 pipeline {
   agent {
-  jenkins-maven
+    label "jenkins-maven"
   }
   stages {
     stage('test') {
