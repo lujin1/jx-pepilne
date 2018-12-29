@@ -13,14 +13,6 @@ pipeline {
         echo '1111'
       }
     }
-    stage('2222') {
-      steps {
-        script {
-          print "12312"
-        }
-
-      }
-    }
     stage('23213') {
       steps {
         containerLog '2w213'
