@@ -4,18 +4,18 @@ pipeline {
   }
   stages {
     stage('test') {
-      parallel {
-        stage('test') {
-          steps {
-            sh 'echo hello'
-          }
-        }
-        stage('1') {
-          agent any
-          steps {
-            sh 'echo "lujin"'
-          }
-        }
+      steps {
+        sh 'echo hello'
+      }
+    }
+    stage('1') {
+      steps {
+        echo 'lujin'
+      }
+    }
+    stage('2') {
+      steps {
+        sh 'echo "2222"'
       }
     }
   }
