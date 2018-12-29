@@ -13,10 +13,5 @@ pipeline {
         echo '1111'
       }
     }
-    stage('2222') {
-      steps {
-        build 'jx-pepilne'
-      }
-    }
   }
 }
