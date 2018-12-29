@@ -1,11 +1,21 @@
 pipeline {
   agent {
-      label "jenkins-maven"
-}
+    label 'jenkins-maven'
+  }
   stages {
     stage('test') {
-      steps {
-        sh 'echo hello'
+      parallel {
+        stage('test') {
+          steps {
+            sh 'echo hello'
+          }
+        }
+        stage('1') {
+          agent any
+          steps {
+            sh 'echo "lujin"'
+          }
+        }
       }
     }
   }
