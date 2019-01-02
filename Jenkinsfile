@@ -18,11 +18,6 @@ pipeline {
         sh 'echo $name'
       }
     }
-    stage('job') {
-      steps {
-        build 'ptest'
-      }
-    }
   }
   environment {
     name = 'LUJIN'
