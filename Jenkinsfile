@@ -13,11 +13,13 @@ pipeline {
         stage('1111') {
           steps {
             echo '1111'
+            sleep 60
           }
         }
         stage('2222') {
           steps {
             echo 'qeqw'
+            sleep 45
           }
         }
       }
