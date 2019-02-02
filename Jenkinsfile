@@ -9,8 +9,17 @@ pipeline {
       }
     }
     stage('1111') {
-      steps {
-        echo '1111'
+      parallel {
+        stage('1111') {
+          steps {
+            echo '1111'
+          }
+        }
+        stage('2222') {
+          steps {
+            echo 'qeqw'
+          }
+        }
       }
     }
     stage('665') {
